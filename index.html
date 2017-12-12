@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weathly Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"> </head>
+
+<body>
+    <div class="container">
+        <ul class="top">
+            <li class="logo"> <img src="https://png.icons8.com/partly-cloudy-day/ios7/50/ffffff">
+                <h1>Weathly.io</h1> </li>
+            <li class="location"> <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <input id="inpLoc" onchange="loadWeather();" type="text" name="inputLocation" placeholder="Enter zip code or city here..." value=""> </li>
+            <li class="date"> <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <p id="timer">Sunday 6:35 pm.</p>
+            </li>
+        </ul>
+        <div class="main_weather">
+            <div class="number_main"> <img src="img/icons/partly-cloudy.png" alt="" class="iconmain">
+                <p id="tempmain">--</p>
+            </div>
+            <div class="text_main">
+                <ul class="location_main">
+                    <li id="temp_description">-------</li>
+                    <li id="temp_location">-------</li>
+                </ul>
+            </div>
+        </div>
+        <div id="temp_hour">
+            <div class="temp_label">
+                <ul>
+                    <li>--</li>
+                    <li>--</li>
+                    <li>--</li>
+                    <li>--</li>
+                    <li>--</li>
+                    <li>--</li>
+                    <li>--</li>
+                    <li>--</li>
+                </ul>
+            </div>
+            <canvas id="temp_chart"></canvas>
+            <div class="hour_temp">
+                <ul>
+                    <li>-- PM</li>
+                    <li>-- PM</li>
+                    <li>-- PM</li>
+                    <li>-- PM</li>
+                    <li>-- PM</li>
+                    <li>-- PM</li>
+                    <li>-- PM</li>
+                    <li>-- PM</li>
+                </ul>
+            </div>
+        </div>
+        <div id="tab_temp">
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'Temperature')" id="defaultOpen">Temperature</button>
+                <button class="tablinks" onclick="openCity(event, 'Precepitation')">Precepitation</button>
+                <button class="tablinks" onclick="openCity(event, 'Wind')">Wind</button>
+            </div>
+            <div id="Temperature" class="tabcontent">
+                <div class="number_temp">
+                    <ul>
+                        <li>10</li>
+                        <li>20</li>
+                        <li>30</li>
+                        <li>40</li>
+                        <li>50</li>
+                        <li>60</li>
+                        <li>70</li>
+                    </ul>
+                </div>
+                <div class="img_temp">
+                    <ul>
+                        <li><img src="img/icons/clear-day.png" alt=""></li>
+                        <li><img src="img/icons/cloudy-weather.png" alt=""></li>
+                        <li><img src="img/icons/mostly-cloudy.png" alt=""></li>
+                        <li><img src="img/icons/rainy-day.png" alt=""></li>
+                        <li><img src="img/icons/rainy-weather.png" alt=""></li>
+                        <li><img src="img/icons/storm-weather-day.png" alt=""></li>
+                        <li><img src="img/icons/partly-cloudy.png" alt=""></li>
+                    </ul>
+                </div>
+                <div class="day_temp">
+                    <ul>
+                        <li>Sunday</li>
+                        <li>Monday</li>
+                        <li>Tuesday</li>
+                        <li>Wenesday</li>
+                        <li>Thursday</li>
+                        <li>Friday</li>
+                        <li>Saturday</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="Precepitation" class="tabcontent">
+                <h3>Precepitation</h3>
+                <p>Paris is the capital of France.</p>
+            </div>
+            <div id="Wind" class="tabcontent">
+                <h3>Wind</h3>
+                <p>Tokyo is the capital of Japan.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/chart_script.js"></script>
+    <script src="js/tab_script.js"></script>
+    <script src="js/weather_script.js"></script>
+    <script src="js/other_script.js"></script>
+    
+</body>
+
+</html>
